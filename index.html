@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101510">
+  <meta name="description" content="IMPULSO FITNESS CLUB: organiza tus entrenamientos, crea rutinas y consulta tu progreso.">
+  <title>IMPULSO FITNESS CLUB | Entrena con intención</title>
+  <style>
+    :root{--bg:#0d110e;--panel:#151c17;--panel2:#1c261f;--text:#f4f7f3;--muted:#aab6ac;--lime:#c5f36a;--line:#2a382d}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{border-bottom:1px solid var(--line);background:rgba(13,17,14,.92);position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+    nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:900;letter-spacing:.12em}.brand span{color:var(--lime)}.navlinks{display:flex;align-items:center;gap:26px;color:var(--muted);font-size:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:13px 19px;font-weight:800;background:var(--lime);color:#10150d;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.06)}.btn.secondary{background:transparent;color:var(--text);border:1px solid #52614f}
+    .hero{padding:92px 0 78px;background:radial-gradient(ellipse at 75% 25%,rgba(197,243,106,.13),transparent 36%),linear-gradient(135deg,#101710,#0d110e 65%)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}.eyebrow{color:var(--lime);font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-.055em;margin:18px 0 22px;max-width:720px}
+    h1 em{font-style:normal;color:var(--lime)}.lead{font-size:18px;color:var(--muted);max-width:590px;margin:0 0 30px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}.visual{min-height:360px;border:1px solid #354535;border-radius:28px;padding:24px;background:linear-gradient(145deg,#202c22,#111812);box-shadow:0 30px 90px #0008;display:flex;flex-direction:column;justify-content:space-between}
+    .visual-top{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;letter-spacing:.12em}.orb{width:190px;height:190px;border-radius:50%;margin:10px auto;background:radial-gradient(circle at 35% 30%,#e3ff9b,#a6d94b 34%,#5a8431 68%,#263c20);box-shadow:0 0 70px #b6ed5b35;display:grid;place-items:center;color:#17200f;font-size:42px;font-weight:1000;letter-spacing:-.08em}
+    .statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{background:#0e150f;border:1px solid #29372b;border-radius:14px;padding:12px}.stat b{display:block;font-size:18px}.stat small{color:var(--muted)}
+    section{padding:76px 0}.section-head{max-width:650px;margin-bottom:34px}.section-head h2{font-size:clamp(30px,4vw,44px);letter-spacing:-.04em;line-height:1.1;margin:12px 0}.section-head p{color:var(--muted);margin:0}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature,.plan{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px}.feature .symbol{font-size:26px}.feature h3{margin:15px 0 8px}.feature p,.plan p{color:var(--muted);margin:0}
+    .plans{background:#111712}.plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.plan{padding:28px}.plan.pro{border-color:#9fca55;background:linear-gradient(145deg,#202b1d,#151c17)}.tag{display:inline-block;color:var(--lime);font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}.plan h3{font-size:28px;margin:12px 0 4px}.price{font-size:34px;font-weight:900;margin:16px 0}.price small{font-size:14px;color:var(--muted);font-weight:500}.plan ul{padding-left:19px;color:var(--muted);min-height:118px}.plan li{margin:8px 0}
+    .notice{margin-top:20px;padding:15px 17px;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:13px}
+    .cta{padding:68px 0}.cta-box{border-radius:26px;padding:42px;background:linear-gradient(110deg,#c5f36a,#9acb45);color:#12190e;display:flex;align-items:center;justify-content:space-between;gap:24px}.cta-box h2{font-size:clamp(28px,4vw,42px);line-height:1.05;margin:0 0 8px;letter-spacing:-.04em}.cta-box p{margin:0;color:#2d3b20}.cta-box .btn{background:#111810;color:#f4f7f3;white-space:nowrap}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:760px){.navlinks a:not(.btn){display:none}.hero{padding:65px 0}.hero-grid{grid-template-columns:1fr;gap:30px}.visual{min-height:300px}.features{grid-template-columns:1fr}.plan-grid{grid-template-columns:1fr}.cta-box{align-items:flex-start;flex-direction:column}.cta-box .btn{width:100%}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap"><nav>
+    <a class="brand" href="#">IMPULSO<span>.</span></a>
+    <div class="navlinks">
+      <a href="#funciones">Funciones</a><a href="#planes">Planes</a>
+      <a class="btn" href="app.html">Abrir aplicación</a>
+    </div>
+  </nav></div>
+</header>
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Fitness · Rutinas · Progreso</div>
+        <h1>Entrena con intención.<br><em>Avanza a tu ritmo.</em></h1>
+        <p class="lead">Un espacio sencillo para organizar tus entrenamientos, crear rutinas y llevar un registro de tu actividad. Tu constancia, tus objetivos y tu propio ritmo.</p>
+        <div class="actions"><a class="btn" href="app.html">Entrar en IMPULSO <span aria-hidden="true">&nbsp;↗</span></a><a class="btn secondary" href="#funciones">Descubrir funciones</a></div>
+      </div>
+      <div class="visual" aria-label="Vista gráfica de la plataforma">
+        <div class="visual-top"><span>IMPULSO / TRAINING</span><span>01 — 03</span></div>
+        <div class="orb">GO</div>
+        <div class="statrow">
+          <div class="stat"><b>01</b><small>Organiza</small></div>
+          <div class="stat"><b>02</b><small>Registra</small></div>
+          <div class="stat"><b>03</b><small>Revisa</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="funciones">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Todo en un mismo lugar</div><h2>Menos complicaciones.<br>Más claridad.</h2><p>Herramientas prácticas para que puedas centrarte en aprender, entrenar con buena técnica y mantener una rutina equilibrada.</p></div>
+      <div class="features">
+        <article class="feature"><div class="symbol">▤</div><h3>Rutinas organizadas</h3><p>Consulta y organiza tus sesiones de entrenamiento en un solo sitio.</p></article>
+        <article class="feature"><div class="symbol">◎</div><h3>Registro de sesiones</h3><p>Anota ejercicios, series y repeticiones para tener un historial de actividad.</p></article>
+        <article class="feature"><div class="symbol">↗</div><h3>Seguimiento personal</h3><p>Revisa tus registros y observa tu constancia a lo largo del tiempo.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="plans" id="planes">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Planes</div><h2>Empieza gratis.<br>Amplía cuando lo necesites.</h2><p>La propuesta freemium de IMPULSO separa las funciones esenciales de las futuras herramientas avanzadas.</p></div>
+      <div class="plan-grid">
+        <article class="plan"><span class="tag">Para empezar</span><h3>Gratis</h3><div class="price">0 € <small>/ siempre</small></div><ul><li>Acceso a funciones básicas</li><li>Organización de rutinas</li><li>Registro de entrenamientos</li></ul><a class="btn" href="app.html">Probar gratis</a></article>
+        <article class="plan pro"><span class="tag">Más herramientas</span><h3>Pro</h3><div class="price">Próximamente</div><ul><li>Funciones avanzadas previstas</li><li>Más opciones de seguimiento</li><li>Experiencia ampliada</li></ul><a class="btn secondary" href="app.html">Ver la aplicación</a></article>
+      </div>
+      <div class="notice">Nota: las funciones Pro y los pagos todavía son demostrativos. No se realizan cobros ni se crean cuentas de usuario en esta versión.</div>
+    </div>
+  </section>
+  <section class="cta">
+    <div class="wrap"><div class="cta-box"><div><h2>Tu próximo entrenamiento<br>empieza aquí.</h2><p>Abre la aplicación y empieza a organizar tus sesiones.</p></div><a class="btn" href="app.html">Abrir IMPULSO ↗</a></div></div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span class="brand">IMPULSO<span>.</span> FITNESS CLUB</span><span>Prototipo web · Versión inicial</span></div></footer>
+</body>
+</html>

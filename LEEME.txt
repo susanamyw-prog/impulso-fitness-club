@@ -1,0 +1,14 @@
+IMPULSO FITNESS CLUB — paquete web
+
+Archivos:
+- index.html: página pública de presentación.
+- app.html: aplicación web de seguimiento de entrenamientos.
+
+Vista previa:
+Abre index.html en un navegador. El botón principal abre app.html.
+
+Publicación:
+Sube index.html y app.html juntos a un servicio de alojamiento web estático. Mantén ambos archivos en la misma carpeta para que los enlaces funcionen.
+
+Importante:
+Esta versión es un prototipo. Los datos se guardan en el navegador del dispositivo; no hay cuentas, sincronización en la nube ni pagos reales. El plan Pro es una demostración. Antes de ofrecerlo comercialmente, revisa privacidad, seguridad, condiciones legales y pagos con una persona adulta responsable.
